@@ -9,5 +9,12 @@ public class Galeria {
         this.kiallitasiTargyak = new ArrayList<>();
     }
     
+    public void kiallitasiTargyatFelvesz(KiallitasiTargy targy){
+        kiallitasiTargyak.add(targy);
+    }
+    
+    public void festmenytFelvesz(Festmeny festmeny){
+        kiallitasiTargyak.add(festmeny);
+    }
     
 }
