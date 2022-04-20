@@ -15,5 +15,6 @@ public class Program {
         galeria.festmenytFelvesz(new Festmeny("Leonardo da Vinci", "Mona Lisa", "kepek.txt")); 
         galeria.festmenytFelvesz(new Festmeny("Leonardo da Vinci", "Mona Lisa", "kepek.txt", LocalDate.of(1505, 12, 12)));
            
+        galeria.allapotMentes("galeria.bin");
     }
 }
