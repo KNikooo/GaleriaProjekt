@@ -1,7 +1,8 @@
 package modell;
 
 import java.text.Collator;
-import java.time.LocalTime;
+import java.time.Clock;
+import java.time.YearMonth;
 import java.util.Comparator;
 import java.util.Date;
 
@@ -26,7 +27,7 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy>{
     private Date letrehozasiDatum;
 
     public KiallitasiTargy(String keszito, String cim) {
-        this(keszito, cim, new Date(2022, 04, 20));
+        this(keszito, cim, new Date(0, 0, 0));
     }
     
     public KiallitasiTargy(String keszito, String cim, Date letrehozasiDatum) {
@@ -50,4 +51,9 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy>{
     public static cimComparator CimRendezo() {
         return new cimComparator();
     }
+
+    @Override
+    public String toString() {
+        return "Kiállítási targy{" + "keszito=" + keszito + ", cim=" + cim + ", letrehozasiDatum=" + letrehozasiDatum + '}';
+    } 
 }

@@ -8,6 +8,12 @@ public class Galeria {
     public Galeria(ArrayList<KiallitasiTargy> kiallitasiTargyak) {
         this.kiallitasiTargyak = new ArrayList<>();
     }
+
+    public Galeria() {
+        this.kiallitasiTargyak = new ArrayList<>();
+    }
+    
+    
     
     public void kiallitasiTargyatFelvesz(KiallitasiTargy targy){
         kiallitasiTargyak.add(targy);
@@ -16,5 +22,9 @@ public class Galeria {
     public void festmenytFelvesz(Festmeny festmeny){
         kiallitasiTargyak.add(festmeny);
     }
-    
+
+    @Override
+    public String toString() {
+        return "Galeria{" + "Targyak=" + kiallitasiTargyak + '}';
+    }
 }
