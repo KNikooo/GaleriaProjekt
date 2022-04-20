@@ -18,6 +18,10 @@ public class Festmeny extends KiallitasiTargy{
         super(keszito, cim, letrehozasiDatum);
         this.fajlEleresiUt = fajlEleresiUt;
     }
-    
-    
+
+    @Override
+    public int compareTo(KiallitasiTargy o) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }
