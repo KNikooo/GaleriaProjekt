@@ -2,6 +2,7 @@ package modell;
 
 import java.text.Collator;
 import java.time.Clock;
+import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.Comparator;
 import java.util.Date;
@@ -24,13 +25,13 @@ class cimComparator implements Comparator<KiallitasiTargy> {
 
 public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy>{
     private String keszito, cim;
-    private Date letrehozasiDatum;
+    private LocalDate letrehozasiDatum;
 
     public KiallitasiTargy(String keszito, String cim) {
-        this(keszito, cim, new Date(0, 0, 0));
+        this(keszito, cim, LocalDate.now());
     }
     
-    public KiallitasiTargy(String keszito, String cim, Date letrehozasiDatum) {
+    public KiallitasiTargy(String keszito, String cim, LocalDate letrehozasiDatum) {
         this.keszito = keszito;
         this.cim = cim;
         this.letrehozasiDatum = letrehozasiDatum;

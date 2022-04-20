@@ -1,5 +1,6 @@
 package modell;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Festmeny extends KiallitasiTargy{
@@ -9,14 +10,18 @@ public class Festmeny extends KiallitasiTargy{
         super(keszito, cim);
     }
 
-    public Festmeny(String fajlEleresiUt, String keszito, String cim) {
+    public Festmeny( String keszito, String cim, String fajlEleresiUt) {
         super(keszito, cim);
         this.fajlEleresiUt = fajlEleresiUt;
     }
 
-    public Festmeny(String fajlEleresiUt, String keszito, String cim, Date letrehozasiDatum) {
+    public Festmeny(String keszito, String cim, String fajlEleresiUt, LocalDate letrehozasiDatum) {
         super(keszito, cim, letrehozasiDatum);
         this.fajlEleresiUt = fajlEleresiUt;
+    }
+
+    public Festmeny(String keszito, String cim, LocalDate letrehozasiDatum) {
+        super(keszito, cim, letrehozasiDatum);
     }
 
     @Override
